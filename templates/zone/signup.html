@@ -1,0 +1,21 @@
+{% extends "zone/base.html" %}
+{% block title %}Signup{% endblock title %}
+{% block content %}
+<br><h1><b>Signup</b></h1><br>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-outline-success" type="submit">Sign Up</button>
+    </form>
+<br>
+<p>Already have an account? <a style=" text-decoration: none;
+        color: #fff;
+        background-color: #00712D;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;"
+        onmouseover="this.style.backgroundColor='black';"
+        onmouseout="this.style.backgroundColor='#00712D';"
+        onmousedown="this.style.backgroundColor='black';"
+        onmouseup="this.style.backgroundColor='#0056b3';" href="{% url 'zone:login' %}">Login</a></p>
+{% endblock content %}

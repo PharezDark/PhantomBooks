@@ -1,0 +1,10 @@
+{% extends "zone/base.html" %}
+{% block title %}Edit Book{% endblock title %}
+{% block content %}
+    <h1>Edit Book</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Edit</button>
+    </form>
+{% endblock content %}
