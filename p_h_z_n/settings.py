@@ -13,6 +13,8 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
+import dj_database_url
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -88,7 +90,7 @@ DATABASES = {
     }
 }
 
-
+DATABASES['default'] = dj_database_url.parse(os.getenv())
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 

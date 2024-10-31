@@ -1,0 +1,1 @@
+web: gunicorn p_h_z_n.wsgi
